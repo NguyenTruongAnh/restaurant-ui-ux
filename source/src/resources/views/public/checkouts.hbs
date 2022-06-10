@@ -1,0 +1,402 @@
+<link rel="stylesheet" href="/css/public/checkouts.css">
+
+<div class="checkouts">
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-12 col-sm-6">
+                <div class="checkouts-label pt-4 mb-3">
+                    Nhà hàng Cơm nhà
+                </div>
+
+                <!-- Danh sách món ăn -->
+                <ul class="checkouts-list">
+                    <li class="checkouts-item d-flex align-items-center mb-4">
+                        <div class="checkouts-item__img">
+                            <img src="/images/food/lau1.jpg" alt="Img">
+                            <span>1</span>
+                        </div>
+                        <div class="checkouts-item__info d-flex flex-column flex-sm-row justify-content-between ml-3">
+                            <div class="checkouts-item__name">Lẩu thái</div>
+                            <div class="checkouts-item__price">300.000đ</div>
+                        </div>
+                    </li>
+                    <li class="checkouts-item d-flex align-items-center mb-4">
+                        <div class="checkouts-item__img">
+                            <img src="/images/food/lau3.jpg" alt="Img">
+                            <span>1</span>
+                        </div>
+                        <div class="checkouts-item__info d-flex flex-column flex-sm-row justify-content-between ml-3">
+                            <div class="checkouts-item__name">Lẩu dê</div>
+                            <div class="checkouts-item__price">300.000đ</div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="checkouts-summary">
+                    <div class="checkouts-price">
+                        Tạm tính
+                        <span>600.000đ</span>
+                    </div>
+                    <div class="checkouts-ship">
+                        Phí ship
+                        <span>50.000đ</span>
+                    </div>
+                    <div class="checkouts-discount">
+                        Giảm giá
+                        <span>---</span>
+                    </div>
+                </div>
+                <div class="checkouts-note d-flex justify-content-end mt-2">
+                    *Giảm tối đa 1.500.000đ cho mỗi đơn hàng
+                </div>
+                <div class="checkouts-total">
+                    <strong>Tổng tiền</strong>
+                    <span>650.000đ</span>
+                </div>
+            </div>
+
+            <!-- Form điền thông tin -->
+            <div class="col-12 col-sm-6 pb-5 checkouts-payment">
+                <h5 class="text-center pt-4 mt-3">Thông tin thanh toán</h5>
+                <form class="needs-validation checkouts-form" novalidate>
+                    <div class="form-group mt-3">
+                        <input type="text" class="form-control" id="checkouts-name" placeholder="Họ và tên *" required>
+                        <div class="invalid-feedback">
+                            Bạn chưa nhập họ tên
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <input type="text" class="form-control" id="checkouts-member-id"
+                            placeholder="Mã hội viên (nếu có)" required>
+                        <div class="invalid-feedback">
+                            Bạn chưa nhập họ tên
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="checkouts-member-password"
+                                placeholder="Mật khẩu hội viên">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-success checkouts-member-btn" type="button">Xác
+                                    nhận</button>
+                            </div>
+                        </div>
+                        <div class="checkouts-member-message text-danger d-none"
+                            style="font-size: 12.8px; margin-top: 4px;">
+                            Mã hội viên không hợp lệ
+                        </div>
+                    </div>
+                    <div class="form-row mt-3">
+                        <div class="col-md-6 mb-3">
+                            <input type="email" class="form-control" id="checkouts-email" placeholder="Email">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="number" class="form-control" id="checkouts-phone" placeholder="Số điện thoại *"
+                                required>
+                            <div class="invalid-feedback">
+                                Bạn chưa nhập số điện thoại
+                            </div>
+                            <div class="checkouts-phone-message text-danger d-none"
+                                style="font-size: 12.8px; margin-top: 4px;">
+                                Số điện thoại không hợp lệ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row mt-3">
+                        <div class="form-group col-lg-6">
+                            <label for="checkouts-province">Tỉnh thành*:</label>
+                            <select id="checkouts-province" class="custom-select form-control px-2" required>
+                                <option value="CN001" selected>Hồ Chí Minh</option>
+                                <option value="CN002">Đà Nẵng</option>
+                                <option value="CN003">Hà Nội</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="checkouts-district">Quận/Huyện*:</label>
+                            <select id="checkouts-district" class="custom-select form-control px-2" required>
+                                <option value="">--Chọn quận/huyện--</option>
+                                <option value="Quận Bình Tân">Quận Bình Tân</option>
+                                <option value="Quận Bình Thạnh">Quận Bình Thạnh</option>
+                                <option value="Quận Gò Vấp">Quận Gò Vấp</option>
+                                <option value="Quận Phú Nhuận">Quận Phú Nhuận</option>
+                                <option value="Quận Tân Bình">Quận Tân Bình</option>
+                                <option value="Quận Tân Phú">Quận Tân Phú</option>
+                                <option value="Quận Thủ Đức">Quận Thủ Đức</option>
+                                <option value="Huyện Cần Giờ">Huyện Cần Giờ</option>
+                                <option value="Huyện Củ Chi">Huyện Củ Chi</option>
+                                <option value="Huyện Hóc Môn">Huyện Hóc Môn</option>
+                                <option value="Huyện Nhà Bè">Huyện Nhà Bè</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Chọn quận/huyện
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        <input type="text" class="form-control" id="checkouts-address" placeholder="Địa chỉ *" required>
+                        <div class="invalid-feedback">
+                            Bạn chưa cung cấp địa chỉ giao hàng
+                        </div>
+                    </div>
+                    <div class="form-row mt-3">
+                        <div class="form-group col-lg-6">
+                            <label for="checkouts-method">Phương thức thanh toán*:</label>
+                            <select id="checkouts-method" class="custom-select form-control px-2" required>
+                                <option value="">--Chọn phương thức--</option>
+                                <option value="MoMo">Ví MoMo</option>
+                                <option value="ZaloPay">Ví ZaloPay</option>
+                                <option value="ATM">Thẻ ATM</option>
+                                <option value="Visa">Thẻ Visa</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Chọn phương thức thanh toán
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label for="checkouts-card">Mã số:</label>
+                            <input type="number" class="form-control" id="checkouts-card" required>
+                            <div class="invalid-feedback">
+                                Nhập mã số
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="/cart">Giỏ hàng</a>
+                        <button class="btn btn-danger px-3 py-2" type="submit">Đặt hàng</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    {
+        {
+            !--let tempPrice = 0;
+            let shippingFee = 50000;
+            let discountFee = 0;
+            const foods = {};
+
+            function renderItemList() {
+                if (Object.keys(cartList["foods"]).length > 0) {
+                    Object.keys(cartList["foods"]).forEach(foodID => {
+                        const foodQuantity = cartList["foods"][foodID];
+
+                        $.ajax({
+                            async: false,
+                            type: 'GET',
+                            url: `../api/get_food.php?foodID=${foodID}`,
+                            success: function (data) {
+                                const foodName = data.name;
+                                const foodImage = data.image;
+                                const foodPrice = data.price
+                                const totalPrice = foodPrice * foodQuantity;
+
+                                tempPrice = tempPrice + totalPrice;
+                                foods[foodID] = {
+                                    quantity: foodQuantity,
+                                    price: foodPrice,
+                                }
+
+                                setPrice();
+
+                                $('.checkouts-list').append(`
+                        <li class="checkouts-item d-flex align-items-center mb-4">
+                            <div class="checkouts-item__img">
+                                <img src="../api/food-images/${foodImage}" alt="Img">
+                                <span>${foodQuantity}</span>
+                            </div>
+                            <div class="checkouts-item__info d-flex flex-column flex-sm-row justify-content-between ml-3">
+                                <div class="checkouts-item__name">${foodName}</div>
+                                <div class="checkouts-item__price">${Intl.NumberFormat('vi-VN').format(totalPrice)}đ</div>
+                            </div>
+                        </li>
+                    `);
+                            }
+                        });
+                    })
+
+                    // Thiết lập các giá tiền
+                    setPrice();
+                } else {
+                    window.location.href = "/ComNha/menu";
+                }
+
+            }
+
+            function setPrice() {
+                $('.checkouts-price').children('span').html(`${Intl.NumberFormat('vi-VN').format(tempPrice)}đ`);
+
+                if (tempPrice > 1000000) {
+                    shippingFee = 0;
+                }
+
+                $('.checkouts-ship').children('span').html(`${Intl.NumberFormat('vi-VN').format(shippingFee)}đ`);
+                $('.checkouts-discount').children('span').html(`${Intl.NumberFormat('vi-VN').format(discountFee)}đ`);
+                $('.checkouts-total').children('span').html(`${Intl.NumberFormat('vi-VN').format(tempPrice + shippingFee - discountFee)}đ`)
+            }
+
+            renderItemList();
+
+            let memberIDValid = '';
+
+            $('.checkouts-member-btn').click(function () {
+                const memberInputElement = $('#checkouts-member');
+                const memberMessElement = $('.checkouts-member-message');
+                const memberID = memberInputElement.val();
+                if (memberID) {
+                    $.get(`../api/get_member_info.php?memberID=${memberID}`, function (data) {
+                        if (data) {
+                            memberIDValid = data['SoDienThoai'];
+                            memberInputElement.attr('disabled', true);
+                            $('#checkouts-phone').val(memberIDValid);
+                            setDiscount(parseInt(data['TongSoTienThanhToan']));
+                        } else {
+                            memberMessElement.removeClass('d-none');
+
+                            setTimeout(() => {
+                                memberMessElement.addClass('d-none');
+                            }, 2000);
+                        }
+                    }, "json");
+                } else {
+                    memberMessElement.removeClass('d-none');
+
+                    setTimeout(() => {
+                        memberMessElement.addClass('d-none');
+                    }, 2000);
+                }
+            })
+
+            function setDiscount(totalMoney) {
+                let discountPercent = 0.02;
+                if (totalMoney <= 3000000) {
+                    discountPercent = 0.02;
+                } else if (totalMoney <= 5000000) {
+                    discountPercent = 0.05;
+                } else if (totalMoney <= 10000000) {
+                    discountPercent = 0.08;
+                } else if (totalMoney <= 15000000) {
+                    discountPercent = 0.1;
+                } else if (totalMoney <= 20000000) {
+                    discountPercent = 0.12;
+                } else {
+                    discountPercent = 0.15;
+                }
+
+                discountFee = (tempPrice + shippingFee) * discountPercent;
+
+                if (discountFee > 1500000) {
+                    discountFee = 1500000;
+                }
+
+                $('.checkouts-discount').children('span').html(`${Intl.NumberFormat('vi-VN').format(discountFee)}đ`);
+                $('.checkouts-total').children('span').html(`${Intl.NumberFormat('vi-VN').format(tempPrice + shippingFee - discountFee)}đ`)
+            }
+
+            function handelFormCheckoutsSubmit() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.querySelectorAll('.needs-validation.checkouts-form');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        if (form.checkValidity() === false) {
+                            form.classList.add('was-validated');
+                        } else {
+                            form.classList.remove('was-validated');
+                            const phone = $('#checkouts-phone').val();
+                            if (isVietnamesePhoneNumber(phone)) {
+                                const name = $('#checkouts-name').val();
+                                const email = $('#checkouts-email').val();
+                                const address = `${$('#checkouts-address').val()}, ${$('#checkouts-district').val()}, Tp.HCM`;
+                                const message = cartList["message"];
+                                const method = $('#checkouts-method').find(":selected").text();
+
+                                $.ajax({
+                                    url: "../api/create_order.php",
+                                    type: "POST",
+                                    data: JSON.stringify({
+                                        name,
+                                        memberID: memberIDValid,
+                                        phone,
+                                        email,
+                                        address,
+                                        foods: foods,
+                                        message,
+                                        paymentComNhaValid: true,
+                                        tempPrice,
+                                        discountFee,
+                                        shippingFee,
+                                        totalPrice: tempPrice + shippingFee - discountFee,
+                                    }),
+                                    dataType: "json",
+                                    contentType: "application/json; charset=utf-8",
+                                    success: function (result) {
+                                        if (result) {
+                                            $('.checkouts-payment').children('.checkouts-form').remove();
+                                            $('.checkouts-payment').append(`
+                                    <div class="checkouts-paid">
+                                        <div class="checkouts-paid__heading">
+                                            <p class="checkouts-paid__heading-title">
+                                                <i class="fas fa-check"></i>
+                                                Đặt món thành công 
+                                            </p>
+                                            <p class="checkouts-paid__heading-bill-id">Mã hóa đơn: ${result}</p>
+                                            <p>Cảm ơn bạn đã đặt món!</p>
+                                        </div>
+                                        <div class="checkouts-paid__content">
+                                            <p class="checkouts-paid__content-title">
+                                                Thông tin đặt món:
+                                            </p>
+                                            <ul class="checkouts-paid__content-list">
+                                                <li class="checkouts-paid__content-item">
+                                                    Họ tên: ${name}
+                                                </li>
+                                                <li class="checkouts-paid__content-item">
+                                                    Số điện thoại: ${phone}
+                                                </li>
+                                                <li class="checkouts-paid__content-item">
+                                                    Địa chỉ giao: ${address}
+                                                </li>
+                                                <li class="checkouts-paid__content-item">
+                                                    Phương thức thanh toán: ${method}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="d-flex justify-content-end mt-4">
+                                            <a href="/ComNha/menu">Tiếp tục đặt món</a>
+                                        </div>
+                                    </div>
+                                `);
+                                            window.localStorage.setItem('com_nha_cart', JSON.stringify({ foods: {}, message: "" }));
+                                            cartList = JSON.parse(window.localStorage.getItem("com_nha_cart"));
+                                        } else {
+                                            alert("Lỗi hệ thống, đặt món thất bại!");
+                                        }
+                                    }
+                                });
+
+                            } else {
+                                $('.checkouts-phone-message').removeClass('d-none');
+
+                                setTimeout(() => {
+                                    $('.checkouts-phone-message').addClass('d-none');
+                                }, 2000);
+                            }
+                        }
+
+                    }, false);
+                });
+            }
+
+            function isVietnamesePhoneNumber(number) {
+                return /(84|0[3|5|7|8|9])+([0-9]{8})\b/.test(number);
+            }
+
+            window.addEventListener('load', handelFormCheckoutsSubmit, false); --}
+    }
+
+</script>
